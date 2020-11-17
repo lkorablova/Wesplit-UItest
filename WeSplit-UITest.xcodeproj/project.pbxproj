@@ -11,7 +11,18 @@
 		22743D0525644FCE008F7AAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22743D0425644FCE008F7AAB /* ContentView.swift */; };
 		22743D0725644FD0008F7AAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22743D0625644FD0008F7AAB /* Assets.xcassets */; };
 		22743D0A25644FD0008F7AAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22743D0925644FD0008F7AAB /* Preview Assets.xcassets */; };
+		22743D1925646C4C008F7AAB /* WeSplit_UITestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22743D1825646C4C008F7AAB /* WeSplit_UITestUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22743D1B25646C4C008F7AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22743CF725644FCE008F7AAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22743CFE25644FCE008F7AAB;
+			remoteInfo = "WeSplit-UITest";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		22743CFF25644FCE008F7AAB /* WeSplit-UITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeSplit-UITest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +31,20 @@
 		22743D0625644FD0008F7AAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22743D0925644FD0008F7AAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22743D0B25644FD0008F7AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22743D1625646C4C008F7AAB /* WeSplit-UITestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WeSplit-UITestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22743D1825646C4C008F7AAB /* WeSplit_UITestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplit_UITestUITests.swift; sourceTree = "<group>"; };
+		22743D1A25646C4C008F7AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		22743CFC25644FCE008F7AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22743D1325646C4C008F7AAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				22743D0125644FCE008F7AAB /* WeSplit-UITest */,
+				22743D1725646C4C008F7AAB /* WeSplit-UITestUITests */,
 				22743D0025644FCE008F7AAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				22743CFF25644FCE008F7AAB /* WeSplit-UITest.app */,
+				22743D1625646C4C008F7AAB /* WeSplit-UITestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +92,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		22743D1725646C4C008F7AAB /* WeSplit-UITestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22743D1825646C4C008F7AAB /* WeSplit_UITestUITests.swift */,
+				22743D1A25646C4C008F7AAB /* Info.plist */,
+			);
+			path = "WeSplit-UITestUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,6 +121,24 @@
 			productReference = 22743CFF25644FCE008F7AAB /* WeSplit-UITest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		22743D1525646C4C008F7AAB /* WeSplit-UITestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22743D1D25646C4C008F7AAB /* Build configuration list for PBXNativeTarget "WeSplit-UITestUITests" */;
+			buildPhases = (
+				22743D1225646C4C008F7AAB /* Sources */,
+				22743D1325646C4C008F7AAB /* Frameworks */,
+				22743D1425646C4C008F7AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22743D1C25646C4C008F7AAB /* PBXTargetDependency */,
+			);
+			name = "WeSplit-UITestUITests";
+			productName = "WeSplit-UITestUITests";
+			productReference = 22743D1625646C4C008F7AAB /* WeSplit-UITestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -100,6 +150,10 @@
 				TargetAttributes = {
 					22743CFE25644FCE008F7AAB = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					22743D1525646C4C008F7AAB = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 22743CFE25644FCE008F7AAB;
 					};
 				};
 			};
@@ -117,6 +171,7 @@
 			projectRoot = "";
 			targets = (
 				22743CFE25644FCE008F7AAB /* WeSplit-UITest */,
+				22743D1525646C4C008F7AAB /* WeSplit-UITestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +183,13 @@
 			files = (
 				22743D0A25644FD0008F7AAB /* Preview Assets.xcassets in Resources */,
 				22743D0725644FD0008F7AAB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22743D1425646C4C008F7AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +205,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22743D1225646C4C008F7AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22743D1925646C4C008F7AAB /* WeSplit_UITestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22743D1C25646C4C008F7AAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22743CFE25644FCE008F7AAB /* WeSplit-UITest */;
+			targetProxy = 22743D1B25646C4C008F7AAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		22743D0C25644FD0008F7AAB /* Debug */ = {
@@ -306,6 +384,44 @@
 			};
 			name = Release;
 		};
+		22743D1E25646C4C008F7AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5A4NFYZAMP;
+				INFOPLIST_FILE = "WeSplit-UITestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "liliia.korablova.WeSplit-UITestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WeSplit-UITest";
+			};
+			name = Debug;
+		};
+		22743D1F25646C4C008F7AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5A4NFYZAMP;
+				INFOPLIST_FILE = "WeSplit-UITestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "liliia.korablova.WeSplit-UITestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WeSplit-UITest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +439,15 @@
 			buildConfigurations = (
 				22743D0F25644FD0008F7AAB /* Debug */,
 				22743D1025644FD0008F7AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22743D1D25646C4C008F7AAB /* Build configuration list for PBXNativeTarget "WeSplit-UITestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22743D1E25646C4C008F7AAB /* Debug */,
+				22743D1F25646C4C008F7AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
