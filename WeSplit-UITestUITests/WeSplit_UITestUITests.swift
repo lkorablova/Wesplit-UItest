@@ -9,7 +9,7 @@ import XCTest
 
 class WeSplit_UITestUITests: XCTestCase {
 
-    func testExample() throws {
+    func testAmountInput() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
@@ -33,17 +33,16 @@ class WeSplit_UITestUITests: XCTestCase {
         let key2 = app2/*@START_MENU_TOKEN@*/.keys["5"]/*[[".keyboards.keys[\"5\"]",".keys[\"5\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         key2.tap()
         key2.tap()
-        key.tap()
-        key.tap()
-        key.tap()
-        key.tap()
-        key.tap()
+        key2.tap()
+        key2.tap()
+        key2.tap()
+        key2.tap()
+        key2.tap()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(app.textFields.firstMatch.value as! String == "222225555555")
     }
 
-    func testExample2() throws {
+    func testAmountAndPercentage() throws {
 
         let app = XCUIApplication()
         app.launch()
@@ -67,6 +66,35 @@ class WeSplit_UITestUITests: XCTestCase {
         tablesQuery/*@START_MENU_TOKEN@*/.buttons["20%"]/*[[".cells[\"10%, 10%, 15%, 15%, 20%, 20%, 25%, 25%, 0%, 0%\"]",".segmentedControls.buttons[\"20%\"]",".buttons[\"20%\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
         tablesQuery/*@START_MENU_TOKEN@*/.buttons["25%"]/*[[".cells[\"10%, 10%, 15%, 15%, 20%, 20%, 25%, 25%, 0%, 0%\"]",".segmentedControls.buttons[\"25%\"]",".buttons[\"25%\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
         tablesQuery/*@START_MENU_TOKEN@*/.buttons["0%"]/*[[".cells[\"10%, 10%, 15%, 15%, 20%, 20%, 25%, 25%, 0%, 0%\"]",".segmentedControls.buttons[\"0%\"]",".buttons[\"0%\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+    }
+
+    func testTipCalculation() {
+        let app = XCUIApplication()
+        app.launch()
+
+        let tablesQuery = app.tables
+        tablesQuery.buttons["25%"].tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.textFields["Amount"]/*[[".cells[\"Amount\"].textFields[\"Amount\"]",".textFields[\"Amount\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+
+
+        app.keys["4"].tap()
+
+        let key = app.keys["0"]
+        key.tap()
+        key.tap()
+
+        XCTAssert(app.staticTexts["$125.00"].exists)
+    }
+
+    func testNumberOfPeople() {
+        let app = XCUIApplication()
+        app.launch()
+
+        app.tables/*@START_MENU_TOKEN@*/.buttons["Number of people"]/*[[".cells[\"Number of people\"]",".buttons[\"Number of people\"]",".buttons[\"picker\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[1]]@END_MENU_TOKEN@*/.tap()
+
+        app.tables.buttons["20"].tap()
+
+        XCTAssert(app.tables.buttons["20"].exists)
 
     }
 }
